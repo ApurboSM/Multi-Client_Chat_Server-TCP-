@@ -1,4 +1,4 @@
-# Task 6: Multi-Client Chat Server (TCP)
+# Multi-Client Chat Server (TCP)
 
 ## Overview
 A real-time multi-client chat system where multiple users can connect simultaneously, broadcast messages to everyone, and send private messages to specific users.
@@ -357,4 +357,4 @@ BUFFER_SIZE = 2048       # Message buffer size
 ✓ **Robust**: Comprehensive error handling  
 ✓ **Private Messaging**: Secure 1-on-1 communication  
 ✓ **State Management**: Accurate client tracking  
-✓ **Clean Exit**: Proper cleanup and notifications  
+✓ **Clean Exit**: Proper cleanup and notifications
