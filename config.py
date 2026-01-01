@@ -122,7 +122,4 @@ def main():
                 print(f"\n[ERROR] Failed to send message: {e}")
             break   
         print("[ERROR] Username cannot be empty.")
-            receive_thread.start().start()
-    except Exception as e: 
-        print(f"[ERROR] Could not connect to server: {e}")
-        return
+            
