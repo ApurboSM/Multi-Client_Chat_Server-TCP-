@@ -46,6 +46,7 @@ A real-time multi-client chat system where multiple users can connect simultaneo
 task6/
 ├── server.py       # Chat server
 ├── client.py       # Chat client
+├── config.py       # Configuration settings
 └── README.md       # This file
 ```
 
@@ -333,11 +334,19 @@ clients_lock = threading.Lock()  # Thread-safe access
 
 ## Configuration
 
-Modify these constants in both files:
+All configuration settings are centralized in `config.py`:
+
 ```python
+# Network Settings
+HOST = '0.0.0.0'         # Server host (0.0.0.0 = all interfaces)
 PORT = 5173              # Server port
 BUFFER_SIZE = 2048       # Message buffer size
+
+# Client Settings
+SERVER_HOST = 'localhost'  # Server address for client
 ```
+
+To modify settings, edit `config.py` and both server and client will use the updated values.
 
 ## Error Handling
 
@@ -350,11 +359,13 @@ BUFFER_SIZE = 2048       # Message buffer size
 
 ## Key Advantages
 
-✓ **Real-time Communication**: Instant message delivery  
+✓ **Real-time Communication**: Instant message delivery     
 ✓ **Scalable**: Handles multiple concurrent users  
 ✓ **Thread-safe**: No race conditions or data corruption  
 ✓ **User-friendly**: Clear commands and formatting  
 ✓ **Robust**: Comprehensive error handling  
 ✓ **Private Messaging**: Secure 1-on-1 communication  
 ✓ **State Management**: Accurate client tracking  
-✓ **Clean Exit**: Proper cleanup and notifications
+✓ **Clean Exit**: Proper cleanup and notifications  
+✓ **Centralized Configuration**: Easy to modify settings via config.py
+
